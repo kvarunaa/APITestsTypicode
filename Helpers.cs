@@ -31,6 +31,5 @@ namespace APITestsTypicode
         {
             return restClient.Execute(restRequest);
         }
-
     }
 }

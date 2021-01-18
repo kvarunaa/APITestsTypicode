@@ -47,22 +47,11 @@ namespace APITestsTypicode.Steps
             Assert.That(response.StatusCode.ToString(), Is.EqualTo(statusCode));
         }
 
-        [Given(@"I have made a API request to get comments on post (.*)")]
-        public void GivenIHaveMadeAAPIRequestToGetCommentsOnPost(string postNumber)
-        {
-            client = helper.SetUrl(BASE_URL, "posts/" + postNumber+"/comments");
-            request = helper.CreateGetRequest();
-            request.RequestFormat = DataFormat.Json;
-            response = helper.GetResponse(client, request);
-        }
-
-        [Then(@"I see list of comments on specified post  with status '(.*)'")]
-        public void ThenISeeListOfCommentsOnSpecifiedPostWithStatus(string statusCode)
+        [Then(@"I see post with invalid status ""(.*)""")]
+        public void ThenISeePostWithInvalidStatus(string statusCode)
         {
             Assert.That(response.StatusCode.ToString(), Is.EqualTo(statusCode));
         }
-
-
 
     }
 }

@@ -26,7 +26,7 @@ namespace APITestsTypicode.Steps
 
         }
 
-        [Then(@"I see list of posts  with status (.*)")]
+        [Then(@"I see list of posts with status (.*)")]
         public void ThenISeeListOfPostsWithStatus(string statusCode)
         {
             Assert.That(response.StatusCode.ToString(), Is.EqualTo(statusCode));

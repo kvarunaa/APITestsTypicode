@@ -11,7 +11,7 @@ namespace APITestsTypicode
     public class UnitTests
     {
         [Test]
-        public void TestMethod1GET()
+        public void GetAllPosts()
         {
             var client = new RestClient(" https://jsonplaceholder.typicode.com/");
             var request = new RestRequest("posts/{postid}", Method.GET);
@@ -23,7 +23,7 @@ namespace APITestsTypicode
             Assert.That(response.Data.Title, Is.EqualTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit"));
         }
         [Test]
-        public void TestMethodGETComments()
+        public void GetAllCommentsForAPost()
         {
             var client = new RestClient(" https://jsonplaceholder.typicode.com/");
             var request = new RestRequest("posts/{postid}/comments", Method.GET);
@@ -37,7 +37,7 @@ namespace APITestsTypicode
 
         [Test]
         [System.Obsolete]
-        public void TestMethod2POST()
+        public void PostANewPost()
         {
             var client = new RestClient(" https://jsonplaceholder.typicode.com/");
             var request = new RestRequest("posts", Method.POST);

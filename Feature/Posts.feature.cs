@@ -104,7 +104,7 @@ this.ScenarioInitialize(scenarioInfo);
 testRunner.Given("I have made a API request to get posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
-testRunner.Then("I see list of posts  with status OK", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I see list of posts with status OK", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -150,14 +150,14 @@ testRunner.Then("I see post  with status OK", ((string)(null)), ((TechTalk.SpecF
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Get specified with invalid post value")]
+        [NUnit.Framework.DescriptionAttribute("Get invalid post")]
         [NUnit.Framework.TestCaseAttribute("0", null)]
-        public virtual void GetSpecifiedWithInvalidPostValue(string postNumber, string[] exampleTags)
+        public virtual void GetInvalidPost(string postNumber, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("postNumber", postNumber);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get specified with invalid post value", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get invalid post", null, tagsOfScenario, argumentsOfScenario);
 #line 15
  this.ScenarioInitialize(scenarioInfo);
 #line hidden

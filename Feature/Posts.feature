@@ -2,7 +2,7 @@
 	
 Scenario: Get all posts 
 Given I have made a API request to get posts 
-Then I see list of posts  with status OK
+Then I see list of posts with status OK
 
 
 Scenario Outline: Get specified post
@@ -12,7 +12,7 @@ Examples:
  | postNumber |  
  | 1          | 
 
- Scenario Outline: Get specified with invalid post value
+ Scenario Outline: Get invalid post 
 Given I have made a API request to get all posts for <postNumber>
 Then I see post with invalid status "NotFound"
 Examples: 
